@@ -1,8 +1,10 @@
 const beerCollection = document.querySelector('#beers');
 
+const modal = document.querySelector('#modal')
+modal.className = "hidden"
+
 document.addEventListener("DOMContentLoaded", () => {
     fetchBeers()
-    openDescription()
 })
 
 function fetchBeers() {
@@ -27,7 +29,7 @@ function renderSingleBeer(beer) {
         <p>ABV%:${beer.abv}</p>
     `
     let button = document.createElement("button")
-    button.className = "desrciption-button"
+    button.className = "description-button"
     button.innerText = "Description"
     button.addEventListener('click', () => {
         openDescription(beer)
@@ -36,8 +38,18 @@ function renderSingleBeer(beer) {
     beerCollection.appendChild(div)
 }
 
-function openDescription(beers, button) {
-    return fetch("https://api.punkapi.com/v2/beers/", {
+// function openDescription(event) {
+//     let description = event.target.innerText
+//     modal.className = ""
+//     modal.innerText = `${event}`
+//     setTimeout(() => {
+//         modal.className = "hidden"
+//     }, 15000);
+// }
+
+
+function openDescription(beer) {
+    fetch(`https://api.punkapi.com/v2/beers?beer_name=${beer.name.split(" ").join("_")}`, {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',
@@ -46,6 +58,12 @@ function openDescription(beers, button) {
     })
     .then(response => response.json())
     .then(data => {
-        button.innerText = beers.description
+        console.log(data)
+        let description = beer.description
+        modal.className = ""
+        modal.innerText = `${description}`
+        setTimeout(() => {
+            modal.className = "hidden"
+        }, 10000);
 })
 }

@@ -21,14 +21,15 @@ body {
     padding: 15px 20px 18px 18px;
     border-radius: 5px;
     box-shadow: 2px 5px 5px #333;
+    text-align: center;
 }
 
 .card {
     text-align: center;
     border: orangered 1px;
     padding: 1rem;
-    width: 15rem;
-    height: 25rem;
+    width: 20rem;
+    height: 30rem;
     display: inline-grid;
     margin: 1rem 2rem;
     box-shadow: 3px 4px #e04b52;
@@ -40,3 +41,25 @@ body {
     width: auto;
 }
 
+#modal {
+    border-radius: 10px;
+    background-color: royalblue;
+    color: white;
+    
+
+    margin: 1em;
+    padding: 1em;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+#modal p {
+    margin-bottom: 0;
+}
+
+.hidden {
+    visibility: hidden;
+}
