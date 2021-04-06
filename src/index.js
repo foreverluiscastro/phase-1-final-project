@@ -1,7 +1,7 @@
 const beerCollection = document.querySelector('#beers');
 
-const modal = document.querySelector('#modal')
-modal.className = "hidden"
+const modal = document.querySelector('#modal');
+modal.className = "hidden";
 
 document.addEventListener("DOMContentLoaded", () => {
     fetchBeers()
@@ -37,16 +37,6 @@ function renderSingleBeer(beer) {
     div.appendChild(button)
     beerCollection.appendChild(div)
 }
-
-// function openDescription(event) {
-//     let description = event.target.innerText
-//     modal.className = ""
-//     modal.innerText = `${event}`
-//     setTimeout(() => {
-//         modal.className = "hidden"
-//     }, 15000);
-// }
-
 
 function openDescription(beer) {
     fetch(`https://api.punkapi.com/v2/beers?beer_name=${beer.name.split(" ").join("_")}`, {
