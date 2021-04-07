@@ -17,4 +17,4 @@ The functionality of my Javascript is pretty simple:
 <br>
 -Each button would then trigger a click event that when called upon, displays the description for each unique beer in a modal
 <br>
--After 10 seconds the modal is removed from the screen until called upon again
+-After 15 seconds the modal is removed from the screen until called upon again

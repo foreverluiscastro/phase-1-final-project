@@ -54,6 +54,6 @@ function openDescription(beer) {
         modal.innerText = `${description}`
         setTimeout(() => {
             modal.className = "hidden"
-        }, 10000);
+        }, 15000);
 })
 }
