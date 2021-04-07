@@ -1,8 +1,8 @@
 # phase-1-final-project
 Hello, My name is Luis Castro and this is my Beer Application.
 The repository for my app is available online at: https://github.com/foreverluiscastro/phase-1-final-project
-To the use this application, fork this repo into a local repository and navigate into the repo
-you should see an HTML and CSS sheet along with a src folder with the JS sheet nested inside
+To the use this application, fork this repo into a local repository and navigate into the repo.
+you should see an HTML and CSS sheet along with a src folder with the JS sheet nested inside.
 The functionality of my Javascript is pretty simple:
 
 -I use a fetch request to GET the Beers API
