@@ -6,9 +6,15 @@ you should see an HTML and CSS sheet along with a src folder with the JS sheet n
 The functionality of my Javascript is pretty simple:
 
 -I use a fetch request to GET the Beers API
+<br>
 -I render all the Beers into an array
+<br>
 -I then iterate througth the array creating individual beers
+<br>
 -Each beer is then assigned a Div with a name, tagline and ABV% field for the corresponding key values
+<br>
 -I decided for additional functionality I would create a Description button for each beer
+<br>
 -Each button would then trigger a click event that when called upon, displays the description for each unique beer in a modal
+<br>
 -After 10 seconds the modal is removed from the screen until called upon again
